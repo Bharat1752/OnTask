@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Timer</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container timer-layout">
+        <!-- Logo Placeholder -->
+        <div class="logo-placeholder">
+            <span>[ Logo Placeholder ]</span>
+        </div>
+
+        <header>
+            <h1 id="active-task-title">Working on: Task</h1>
+        </header>
+
+        <!-- Big Digital Stopwatch in Center -->
+        <div class="stopwatch-display-container">
+            <div id="stopwatch" class="digital-clock">00:00</div>
+        </div>
+
+        <!-- Break and Continue Controls -->
+        <div class="timer-controls">
+            <button id="break-btn" class="btn warning-btn">Break</button>
+            <button id="continue-btn" class="btn primary-btn" style="display: none;">Continue</button>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

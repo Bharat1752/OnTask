@@ -1,0 +1,240 @@
+/* Global Theme: Black, White, and Purple */
+:root {
+    --bg-black: #121212;
+    --card-bg: #1e1e1e;
+    --text-white: #ffffff;
+    --text-muted: #aaaaaa;
+    --purple-primary: #8a2be2;
+    --purple-hover: #9b4dca;
+    --purple-border: #4a148c;
+    
+    /* Status Colors */
+    --status-incomplete: #ff4d4d; /* Red */
+    --status-in-progress: #4da6ff; /* Blue */
+    --status-completed: #2ecc71; /* Green */
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: var(--bg-black);
+    color: var(--text-white);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.app-container {
+    width: 100%;
+    max-width: 480px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+/* Logo Placeholder */
+.logo-placeholder {
+    width: 100%;
+    height: 60px;
+    border: 2px dashed var(--purple-primary);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: var(--purple-primary);
+    font-weight: bold;
+    border-radius: 8px;
+    background-color: rgba(138, 43, 226, 0.05);
+}
+.logo{width:50px;
+height:auto;}
+header h1 {
+    font-size: 1.8rem;
+    margin-bottom: 5px;
+}
+
+header p {
+    color: var(--text-muted);
+    font-size: 0.95rem;
+}
+
+/* Cards */
+.card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--purple-border);
+    border-radius: 12px;
+    padding: 20px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
+}
+
+.card h2 {
+    font-size: 1.3rem;
+    margin-bottom: 15px;
+    color: var(--text-white);
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+.form-group label {
+    display: block;
+    margin-bottom: 5px;
+    font-size: 0.9rem;
+    color: var(--text-muted);
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border-radius: 6px;
+    border: 1px solid #333;
+    background-color: #2a2a2a;
+    color: var(--text-white);
+    font-size: 1rem;
+}
+
+.form-group input:focus {
+    outline: none;
+    border-color: var(--purple-primary);
+}
+
+/* Buttons */
+.btn {
+    width: 100%;
+    padding: 12px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    font-weight: bold;
+    cursor: pointer;
+    text-align: center;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.primary-btn {
+    background-color: var(--purple-primary);
+    color: var(--text-white);
+}
+
+.primary-btn:hover {
+    background-color: var(--purple-hover);
+}
+
+.secondary-btn {
+    background-color: #333;
+    color: var(--text-white);
+    margin-top: 15px;
+}
+
+.secondary-btn:hover:not(:disabled) {
+    background-color: #444;
+}
+
+.secondary-btn:disabled {
+    opacity: 0.5;
+    cursor: not-allowed;
+}
+
+.warning-btn {
+    background-color: #e67e22;
+    color: white;
+}
+
+.warning-btn:hover {
+    background-color: #d35400;
+}
+
+/* Checklist Styling */
+.checklist-container {
+    max-height: 200px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.task-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    background: #252525;
+    padding: 10px;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.task-item label {
+    cursor: pointer;
+    flex-grow: 1;
+    font-weight: 500;
+}
+
+/* Status Text Colors */
+.status-incomplete { color: var(--status-incomplete); font-weight: bold; font-size: 0.85rem; }
+.status-in-progress { color: var(--status-in-progress); font-weight: bold; font-size: 0.85rem; }
+.status-completed { color: var(--status-completed); font-weight: bold; font-size: 0.85rem; }
+
+.empty-state {
+    color: var(--text-muted);
+    font-style: italic;
+    text-align: center;
+}
+
+/* Page 2 Timer Specific Styles */
+.timer-layout {
+    text-align: center;
+}
+
+.stopwatch-display-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 40px 0;
+}
+
+.digital-clock {
+    font-size: 4rem;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace;
+    color: var(--text-white);
+    background: #000;
+    padding: 20px 40px;
+    border-radius: 12px;
+    border: 3px solid var(--purple-primary);
+    box-shadow: 0 0 20px rgba(138, 43, 226, 0.4);
+    letter-spacing: 2px;
+}
+
+.timer-controls {
+    display: flex;
+    gap: 10px;
+}
+
+/* Summary Page Styling */
+.summary-card {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+.stat-row {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.1rem;
+    padding-bottom: 10px;
+    border-bottom: 1px solid #2a2a2a;
+}
+
+.score-row {
+    border-bottom: none;
+    color: var(--purple-primary);
+    font-size: 1.3rem;
+}

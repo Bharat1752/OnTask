@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Task Manager - Home</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="app-container">
+        <!-- Logo Placeholder -->
+        <div class="logo-placeholder">
+            <span><img class="logo"src="OnTask logo.png"/></span>
+        </div>
+
+        <header>
+            <h1>Student Task Manager</h1>
+            <p>Organize your homework and boost your score!</p>
+        </header>
+
+        <!-- Task Input Section -->
+        <section class="card">
+            <h2>Add New Task</h2>
+            <form id="task-form">
+                <div class="form-group">
+                    <label for="task-name">Task Name:</label>
+                    <input type="text" id="task-name" placeholder="e.g., Math Homework" required>
+                </div>
+                <div class="form-group">
+                    <label for="task-time">Estimated Time (minutes):</label>
+                    <input type="number" id="task-time" min="1" placeholder="e.g., 30" required>
+                </div>
+                <button type="submit" class="btn primary-btn">Add Task</button>
+            </form>
+        </section>
+
+        <!-- Task Selection & Checklist Section -->
+        <section class="card">
+            <h2>Task Checklist</h2>
+            <p class="instruction">Select a task from the list below and click start:</p>
+            
+            <div id="task-checklist" class="checklist-container">
+                <!-- Dynamically populated tasks will appear here -->
+                <p class="empty-state">No tasks added yet. Add one above!</p>
+            </div>
+
+            <button id="start-task-btn" class="btn secondary-btn" disabled>Start Selected Task</button>
+        </section>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
